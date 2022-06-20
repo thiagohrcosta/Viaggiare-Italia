@@ -20,12 +20,15 @@ export function Banner(){
 
       >
         <Text
-          fontSize={64}
+          fontSize={84}
         >
-          ITALY
+          ITALIA
         </Text>
-        <Text>
-          Explore the world of Italy
+
+        <Text
+          fontSize={32}
+        >
+          Esplora un mondo chiamato Italia
         </Text>
       </Box>
     </Box>

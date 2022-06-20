@@ -20,7 +20,7 @@ export function Destinations() {
           fontWeight={'700'}
           fontSize={24}
           marginBottom={4}
-        >The best places in Italy</Text>
+        >Trova il meglio dell'Italia</Text>
         <Stack spacing={4}>
           <InputGroup>
             <InputLeftElement
@@ -29,7 +29,7 @@ export function Destinations() {
             />
             <Input
               color={'blue.900'}
-              type='tel' placeholder='Search for something...'
+              type='tel' placeholder='Cercare qualcosa...'
             />
             <Button
               marginLeft={4}
@@ -43,7 +43,7 @@ export function Destinations() {
                 border: '2px solid #0F1C4A',
               }}
             >
-              Search
+              Ricerca
             </Button>
           </InputGroup>
         </Stack>
@@ -57,16 +57,16 @@ export function Destinations() {
           padding={6}
       >
         <GridItem >
-          <TravelCard />
+          <TravelCard city={"Venezia"} />
+        </GridItem>
+        <GridItem>
+          <TravelCard  city={"Positano"} />
         </GridItem>
         <GridItem >
-          <TravelCard />
+          <TravelCard  city={"Milano"} />
         </GridItem>
         <GridItem >
-          <TravelCard />
-        </GridItem>
-        <GridItem >
-          <TravelCard />
+          <TravelCard  city={"Roma"}/>
         </GridItem>
       </Grid>
     </Box>
