@@ -71,7 +71,7 @@ export function HighLights() {
         flexWrap={'wrap'}
         justifyContent={'space-between'}
         marginTop={4}
-        width={'40%'}
+        width={['100%', '40%']}
       >
         <Text
           borderBottom={userChoice === "ristoranti" ? '4px solid #0A0F2B' : ''}

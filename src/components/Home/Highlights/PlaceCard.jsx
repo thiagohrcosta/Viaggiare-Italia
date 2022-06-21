@@ -11,6 +11,13 @@ export function PlaceCard(props) {
           backgroundRepeat={'no-repeat'}
           borderRadius={4}
         >
+          <Box
+            backgroundImage={"linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 100, 0.5) )"}
+            height={[550,350]}
+            width={'100%'}
+          >
+
+          </Box>
       </Box>
       </GridItem>
 
