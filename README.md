@@ -16,3 +16,4 @@ As a backend, an API was developed (is in development) using Ruby on Rails that 
 # Technologies
 
 - [JSON-Server](https://github.com/typicode/json-server):  Since the initial objective was to learn how to use Chakra, JSON-Server was used to provide a fake API environment to display the desired contents. In future steps, the API with Ruby on Rails will be developed, which will replace the JSON-Server, however, this development format allows the Front-end to act independently of the back-end.
+- [PhosphorIcons](https://phosphoricons.com/):  In this project I used the icons provided by PhosphorIcons
