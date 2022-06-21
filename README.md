@@ -1,8 +1,5 @@
 
-![banner](https://res.cloudinary.com/dloadb2bx/image/upload/v1655751356/ITALIA_bhjnqq.png)
-
-
-
+![banner](https://res.cloudinary.com/dloadb2bx/image/upload/v1655778021/ITALIA1_gnauwe.png)
 
 # ITALIA - Esplora un mondo chiamato Italia
 
@@ -13,6 +10,8 @@
 This project was developed using NextJS and Chakra-UI. The option for Chakra was made with the objective of studying the development of functional frontends, without the need to use custom CSS, using everything that the framework can offer.
 
 As a backend, an API was developed (is in development) using Ruby on Rails that supports the data consumed by the Frontend.
+
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1655778021/italia2_ksrhwa.png)
 
 # Technologies
 
