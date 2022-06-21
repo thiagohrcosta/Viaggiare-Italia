@@ -1,0 +1,76 @@
+{
+  "cities": [
+    {
+      "id": "1",
+      "name": "Firenze",
+      "photo": "https://images.unsplash.com/photo-1528114039593-4366cc08227d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+    },
+    {
+      "id": "2",
+      "name": "Roma",
+      "photo": "https://images.unsplash.com/photo-1603199766980-fdd4ac568a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+    },
+    {
+      "id": "3",
+      "name": "Milano",
+      "photo": "https://images.unsplash.com/photo-1606299966686-33b993c30bd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
+    },
+    {
+      "id": "4",
+      "name": "Napoli",
+      "photo": "https://images.unsplash.com/photo-1564863974814-6a7bdc156046?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Ristoranti"
+    },
+    {
+      "id": 1,
+      "name": "Alberghi"
+    },
+    {
+      "id": 1,
+      "name": "Spiagge"
+    },
+    {
+      "id": 1,
+      "name": "Vita noturna"
+    }
+  ],
+  "places": [
+    {
+      "id": 1,
+      "name": "Pizzeria Spazio",
+      "photo": "https://images.unsplash.com/photo-1569230516306-5a8cb5586399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+      "category_id": 1,
+      "city_id": 3,
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Rucantino",
+      "photo": "https://images.unsplash.com/photo-1561716514-daea32af173e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "category_id": 1,
+      "city_id": 3,
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "name": "Belle Tagliatelle",
+      "photo": "https://images.unsplash.com/photo-1561716514-daea32af173e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "category_id": 1,
+      "city_id": 3,
+      "rating": 4.9
+    },
+    {
+      "id": 4,
+      "name": "Pizzeria & Ristorante Il Pizzaiolo",
+      "photo": "https://images.unsplash.com/photo-1617655699589-64375e5ad9a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "category_id": 1,
+      "city_id": 3,
+      "rating": 4.1
+    }
+  ]
+}

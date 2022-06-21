@@ -1,12 +1,26 @@
 import { Box, Button, Grid, GridItem, Input, InputGroup, InputLeftElement, Stack, Text } from '@chakra-ui/react'
 import { MagnifyingGlass } from 'phosphor-react'
-import { TravelCard } from '../../TravelCard'
+import { useEffect, useState } from 'react'
+import { TravelCard } from '../TravelCard'
 
 export function Destinations() {
+  const [destinations, setDestinations] = useState([])
+
+  const fetchData = async () => {
+    const response = await fetch('http://localhost:3000/cities')
+    const data = await response.json()
+    setDestinations(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+
   return(
     <Box>
       <Box
-        maxWidth={1028}
+        maxWidth={[720,1028]}
         padding={6}
         backgroundColor={'whiteAlpha.900'}
         marginTop={-8}
@@ -51,23 +65,23 @@ export function Destinations() {
       <Grid
           backgroundColor={'whiteAlpha.900'}
           maxWidth={1028}
-          templateColumns='repeat(4, 1fr)'
+          templateColumns={['repeat(1, 1fr)', 'repeat(4, 1fr)']}
           gap={6}
           marginX={'auto'}
           padding={6}
       >
-        <GridItem >
-          <TravelCard city={"Venezia"} />
-        </GridItem>
-        <GridItem>
-          <TravelCard  city={"Positano"} />
-        </GridItem>
-        <GridItem >
-          <TravelCard  city={"Milano"} />
-        </GridItem>
-        <GridItem >
-          <TravelCard  city={"Roma"}/>
-        </GridItem>
+        {
+          destinations.map((destination) => {
+            return(
+              <GridItem>
+                <TravelCard
+                  city={destination.name}
+                  photo={destination.photo}
+                />
+              </GridItem>
+            )
+          })
+        }
       </Grid>
     </Box>
   )
