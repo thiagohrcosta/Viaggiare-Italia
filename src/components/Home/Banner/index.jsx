@@ -17,7 +17,6 @@ export function Banner(){
         flexDirection={"column"}
         justifyContent={"center"}
         alignItems={"center"}
-
       >
         <Text
           fontSize={84}
