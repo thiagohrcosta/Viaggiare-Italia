@@ -47,6 +47,7 @@ export function TravelCard(props) {
               backgroundColor: 'blue.900',
               transition: 'all 0.3s ease-in-out',
             }}
+            cursor={'pointer'}
           >
             Vedi di più
           </Text>

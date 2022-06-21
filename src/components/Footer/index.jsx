@@ -10,13 +10,15 @@ export function Footer() {
       alignItems={'center'}
       justifyContent={'space-between'}
     >
-      <Grid maxW={'100%'} marginX={'auto'} templateColumns={['repeat(1, 1fr)','repeat(2, 1fr)']} gap={4}>        <GridItem>
+      <Grid maxW={'100%'} marginX={'auto'} templateColumns={['repeat(1, 1fr)','repeat(3, 1fr)']} gap={4}>
+        <GridItem>
           <AirplaneInFlight size={32} />
         </GridItem>
+        <GridItem></GridItem>
         <GridItem>
           <Text display={'flex'} alignItems={'center'}>
             Sviluppato da Thiago H.R. Costa. Controlla il mio
-            <Link href="https://github.com/thiagohrcosta" isExternal>
+            <Link marginLeft={2} href="https://github.com/thiagohrcosta" isExternal>
             <GithubLogo
               size={32}
             />

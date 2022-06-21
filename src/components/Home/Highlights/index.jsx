@@ -1,5 +1,6 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Grid, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { PlaceCard } from "./PlaceCard";
 
 export function HighLights() {
   const [places, setPlaces] = useState([])
@@ -15,15 +16,24 @@ export function HighLights() {
     if (userChoice === "" || userChoice === "ristoranti") {
       return (
         <Box>
-          {
-            places.map((place) => {
-              return (
-                <Box>
-                  <Text>{place.name}</Text>
-                </Box>
-              )
-            })
-          }
+          <Grid
+            maxWidth={1028}
+            templateColumns={['repeat(1, 1fr)', 'repeat(4, 1fr)']}
+            gap={6}
+            marginX={'auto'}
+          >
+            {
+              places.map((place) => {
+                return (
+                  <PlaceCard
+                    key={place.id}
+                    name={place.name}
+                    photo={place.photo}
+                  />
+                )
+              })
+            }
+          </Grid>
         </Box>
       )
     } else {
@@ -61,7 +71,7 @@ export function HighLights() {
         flexWrap={'wrap'}
         justifyContent={'space-between'}
         marginTop={4}
-        width={'40%'}
+        width={['100%', '40%']}
       >
         <Text
           borderBottom={userChoice === "ristoranti" ? '4px solid #0A0F2B' : ''}
@@ -92,7 +102,9 @@ export function HighLights() {
           Vita notturna
         </Text>
       </Box>
-      <Box>
+      <Box
+        marginTop={4}
+      >
         {handleDisplayPlaces()}
       </Box>
     </Box>
