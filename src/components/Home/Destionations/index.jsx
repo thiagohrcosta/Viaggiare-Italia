@@ -1,19 +1,24 @@
 import { Box, Button, Grid, GridItem, Input, InputGroup, InputLeftElement, Stack, Text } from '@chakra-ui/react'
 import { MagnifyingGlass } from 'phosphor-react'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+
+import api from '../../../services/api'
 import { TravelCard } from '../TravelCard'
 
 export function Destinations() {
+  const [requestLoading, setRequestLoading] = useState(false)
   const [destinations, setDestinations] = useState([])
 
-  const fetchData = async () => {
-    const response = await fetch('http://localhost:3000/destinations')
-    const data = await response.json()
-    setDestinations(data)
+  const fetchDestination = async () => {
+    setRequestLoading(true);
+    const response = await api.get("http://localhost:3000/api/v1/destinations");
+    setDestinations(response.data);
+    setRequestLoading(false);
   }
-
   useEffect(() => {
-    fetchData()
+    fetchDestination()
+    console.log(destinations)
+
   }, [])
 
 
@@ -71,17 +76,22 @@ export function Destinations() {
           padding={6}
       >
         {
-          destinations.map((destination) => {
-            return(
-              <GridItem>
-                <TravelCard
-                  id={destination.id}
-                  city={destination.name}
-                  photo={destination.photo}
-                />
-              </GridItem>
-            )
-          })
+          requestLoading && destinations !== null ? (
+            <p>Loading...</p>
+          ) : (
+            destinations?.slice(0,4).map((destination) => {
+              return(
+                <GridItem>
+                  <TravelCard
+                    key={destination.id}
+                    id={destination.id}
+                    city={destination.name}
+                    photo={destination.photo}
+                  />
+                </GridItem>
+              )
+            })
+          )
         }
       </Grid>
     </Box>
