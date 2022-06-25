@@ -1,6 +1,10 @@
 import { Box, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useEffect } from 'react'
 export function TravelCard(props) {
+  useEffect(() => {
+    console.log(props)
+  },[])
   return (
     <Box
       backgroundImage={props.photo}
@@ -18,12 +22,13 @@ export function TravelCard(props) {
         <Box
           backgroundColor={'#fff'}
           color={'blue.900'}
-          width={['100%','100px']}
+          width={['100%','180px']}
           boxShadow={'0px 0px 10px rgba(0,0,0,0.1)'}
           textAlign={'center'}
         >
           <Text
             fontWeight={'700'}
+            fontSize={14}
           >
             {props.city}
           </Text>

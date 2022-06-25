@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import { Destinations } from '../src/components/Home/Destionations'
-import { Banner } from '../src/components/Home/Banner'
 import { HomeContent } from '../src/components/Home'
 import { Navbar } from '../src/components/Navbar'
 import { Footer } from '../src/components/Footer'
-import { DataContextProvider } from '../src/hooks/dataContext'
+import { DestinationContextProvider } from '../src/context/destinationContext'
 
 export default function Home() {
   return (
@@ -14,11 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <DataContextProvider>
+        <DestinationContextProvider>
           <Navbar />
           <HomeContent />
           <Footer />
-        </DataContextProvider>
+        </DestinationContextProvider>
       </main>
     </div>
   )

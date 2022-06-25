@@ -7,7 +7,7 @@ export function HomeContent(){
     <>
       <Banner />
       <Destinations />
-      <HighLights />
+      {/* <HighLights /> */}
     </>
   )
 }
