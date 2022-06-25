@@ -1,4 +1,5 @@
 import { Box, Text } from '@chakra-ui/react'
+import Link from 'next/link'
 export function TravelCard(props) {
   return (
     <Box
@@ -49,7 +50,9 @@ export function TravelCard(props) {
             }}
             cursor={'pointer'}
           >
-            Vedi di più
+            <Link href={`/destination/${props.id}`}>
+              Vedi di più
+            </Link>
           </Text>
         </Box>
       </Box>

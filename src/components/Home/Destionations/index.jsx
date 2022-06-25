@@ -7,7 +7,7 @@ export function Destinations() {
   const [destinations, setDestinations] = useState([])
 
   const fetchData = async () => {
-    const response = await fetch('http://localhost:3000/cities')
+    const response = await fetch('http://localhost:3000/destinations')
     const data = await response.json()
     setDestinations(data)
   }
@@ -75,6 +75,7 @@ export function Destinations() {
             return(
               <GridItem>
                 <TravelCard
+                  id={destination.id}
                   city={destination.name}
                   photo={destination.photo}
                 />
