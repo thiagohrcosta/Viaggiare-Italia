@@ -29,6 +29,10 @@ export function HighLights() {
                     key={place.id}
                     name={place.name}
                     photo={place.photo}
+                    city_id={place.city_id}
+                    category={place.category_id}
+                    rating={place.rating}
+                    description={place.description}
                   />
                 )
               })
