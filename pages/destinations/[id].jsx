@@ -4,6 +4,7 @@ import api from "../../src/services/api";
 import { useRouter } from 'next/router'
 import { Box, Text } from "@chakra-ui/react";
 import { Navbar } from "../../src/components/Navbar";
+import { PlacesCard } from "../../src/components/PlacesCard";
 
 export default function Destination(props) {
 
@@ -56,6 +57,26 @@ export default function Destination(props) {
             <Text fontSize={92} color={'whiteAlpha.900'}>-</Text>
             <Text fontSize={92} color={'red.500'}>-</Text>
           </Box>
+        </Box>
+      </Box>
+      <Box
+        background={'whiteAlpha.900'}
+        padding={['30px', '12px']}
+        margin={'0 auto'}
+        maxWidth={1028}
+        borderRadius={8}
+        marginTop={-8}
+        >
+        <Box>
+          <Text
+            color={'blue.900'}
+            fontWeight={'700'}
+            fontSize={24}
+          >
+            I migliori posti in città
+          </Text>
+
+          <PlacesCard />
         </Box>
       </Box>
     </>

@@ -39,7 +39,9 @@ export function Destinations() {
           fontWeight={'700'}
           fontSize={24}
           marginBottom={4}
-        >Trova il meglio dell'Italia</Text>
+        >
+          Trova il meglio dell'Italia
+        </Text>
         <Stack spacing={4}>
           <InputGroup>
             <InputLeftElement
