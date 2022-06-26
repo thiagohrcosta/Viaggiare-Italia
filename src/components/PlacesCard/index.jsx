@@ -2,6 +2,7 @@ import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+import PlaceCard from "../PlaceCard";
 
 export function PlacesCard(props){
 
@@ -20,17 +21,16 @@ export function PlacesCard(props){
 
   return (
     <Box>
-      <Grid
-        backgroundColor={'whiteAlpha.900'}
-        templateColumns={['repeat(1, 1fr)', 'repeat(4, 1fr)']}
-        gap={6}
-        marginX={'auto'}
-        padding={6}>
+      <Grid>
         <GridItem>
           {placesByCity && placesByCity.map((place) => {
             if (place.destination_id == router.query.id) {
               return (
-                <><Text color={"red"}>{place.name}</Text></>
+                <PlaceCard
+                  key={place.id}
+                  id={place.id}
+                  name={place.name}
+                />
               )
             }})
           }
