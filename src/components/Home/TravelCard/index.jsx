@@ -55,7 +55,7 @@ export function TravelCard(props) {
             }}
             cursor={'pointer'}
           >
-            <Link href={`/destination/${props.id}`}>
+            <Link href={`/destinations/${props.id}`}>
               Vedi di più
             </Link>
           </Text>
