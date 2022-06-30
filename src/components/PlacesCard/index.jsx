@@ -21,20 +21,24 @@ export function PlacesCard(props){
 
   return (
     <Box>
-      <Grid>
-        <GridItem>
+      <Grid
+        templateColumns={['repeat(1, 1fr)', 'repeat(4, 1fr)']}
+        gap={6}
+      >
           {placesByCity && placesByCity.map((place) => {
             if (place.destination_id == router.query.id) {
               return (
-                <PlaceCard
-                  key={place.id}
-                  id={place.id}
-                  name={place.name}
-                />
+                <GridItem>
+                  <PlaceCard
+                    key={place.id}
+                    id={place.id}
+                    name={place.name}
+                    photo={place.photo}
+                  />
+                </GridItem>
               )
             }})
           }
-        </GridItem>
       </Grid>
     </Box>
 

@@ -60,7 +60,8 @@ export default function Destination(props) {
         </Box>
       </Box>
       <Box
-        background={'whiteAlpha.900'}
+        background={'#fff'}
+        opacity={1}
         padding={['30px', '12px']}
         margin={'0 auto'}
         maxWidth={1028}
@@ -72,6 +73,10 @@ export default function Destination(props) {
             color={'blue.900'}
             fontWeight={'700'}
             fontSize={24}
+            marginTop={8}
+            marginBottom={8}
+            textAlign={"center"}
+            textTransform={"uppercase"}
           >
             I migliori posti in città
           </Text>
